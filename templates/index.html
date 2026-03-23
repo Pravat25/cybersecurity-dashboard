@@ -6,23 +6,56 @@
     <style>
         body {
             background-color: #0d1117;
-            color: #00ff9c;
+            color: #c9d1d9;
             font-family: monospace;
             padding: 20px;
         }
+
+        h1 {
+            color: #58a6ff;
+        }
+
         .log {
-            background: #161b22;
             padding: 10px;
             margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        .critical {
+            background-color: #2d0000;
+            color: #ff4d4d;
+            border-left: 5px solid red;
+        }
+
+        .warning {
+            background-color: #2d2a00;
+            color: #ffd700;
+            border-left: 5px solid yellow;
+        }
+
+        .info {
+            background-color: #002d1a;
+            color: #00ff9c;
+            border-left: 5px solid green;
         }
     </style>
 </head>
 <body>
 
-<h1>🔐 Cybersecurity Dashboard</h1>
+<h1>🔐 Cybersecurity Monitoring Dashboard</h1>
 
 {% for log in logs %}
-<div class="log">{{ log }}</div>
+
+    {% if "CRITICAL" in log %}
+        <div class="log critical">{{ log }}</div>
+
+    {% elif "WARNING" in log %}
+        <div class="log warning">{{ log }}</div>
+
+    {% else %}
+        <div class="log info">{{ log }}</div>
+    {% endif %}
+
 {% endfor %}
 
 </body>
