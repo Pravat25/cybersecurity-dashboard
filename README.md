@@ -15,7 +15,7 @@ It integrates with a packet sniffer to display live network activity and detect 
 
 ## Dashboard Preview
 
-![Dashboard Screenshot](dashboard.png)
+![Dashboard Screenshot]([dashboard.png](https://github.com/Pravat25/cybersecurity-dashboard/blob/main/Dashboard.png))
 
 ---
 
