@@ -30,13 +30,14 @@ def read_logs():
         elif "ICMP" in log:
             stats["icmp"] += 1
 
-        # Simple detection rules
+        # Detection rules
         if "22" in log or "3389" in log:
             stats["warning"] += 1
-            log = "WARNING: " + log
-        elif stats["total"] > 20:
+            log = "WARNING: Suspicious port activity | " + log
+
+        elif "Failed" in log or "error" in log.lower():
             stats["critical"] += 1
-            log = "CRITICAL: High traffic detected | " + log
+            log = "CRITICAL: Possible attack detected | " + log
 
         processed_logs.append(log)
 
