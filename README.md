@@ -13,6 +13,12 @@ It integrates with a packet sniffer to display live network activity and detect 
 
 ---
 
+## Dashboard Preview
+
+![Dashboard Screenshot](dashboard.png)
+
+---
+
 ## Features
 
 - Real-time network log monitoring
