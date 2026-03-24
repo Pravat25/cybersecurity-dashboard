@@ -24,10 +24,10 @@ It integrates with a packet sniffer to display live network activity and detect 
 
 ## Advanced Features
 
-- 📊 Live statistics (Total, TCP, UDP, ICMP)
-- ⚠️ Warning detection (suspicious ports like 22, 3389)
-- 🔴 Critical alerts (possible attack patterns)
-- 📁 Log file integration (`packet_log.txt`)
+-  Live statistics (Total, TCP, UDP, ICMP)
+-  Warning detection (suspicious ports like 22, 3389)
+-  Critical alerts (possible attack patterns)
+-  Log file integration (`packet_log.txt`)
 
 ---
 
