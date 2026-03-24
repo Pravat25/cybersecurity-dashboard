@@ -15,6 +15,42 @@
             color: #58a6ff;
         }
 
+        h2 {
+            color: #79c0ff;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #161b22;
+            padding: 10px 15px;
+            border-radius: 8px;
+            min-width: 120px;
+            text-align: center;
+            border: 1px solid #30363d;
+        }
+
+        .card span {
+            display: block;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+
+        .warning-text {
+            color: #ffd700;
+        }
+
+        .critical-text {
+            color: #ff4d4d;
+        }
+
+        /* Logs */
         .log {
             padding: 10px;
             margin: 5px 0;
@@ -42,7 +78,20 @@
 </head>
 <body>
 
-<h1>Cybersecurity Monitoring Dashboard</h1>
+<h1> Cybersecurity Monitoring Dashboard</h1>
+
+<h2> Statistics</h2>
+
+<div class="stats">
+    <div class="card">Total<span>{{ stats.total }}</span></div>
+    <div class="card">TCP<span>{{ stats.tcp }}</span></div>
+    <div class="card">UDP<span>{{ stats.udp }}</span></div>
+    <div class="card">ICMP<span>{{ stats.icmp }}</span></div>
+    <div class="card warning-text">Warnings<span>{{ stats.warning }}</span></div>
+    <div class="card critical-text">Critical<span>{{ stats.critical }}</span></div>
+</div>
+
+<h2>📡 Live Traffic Logs</h2>
 
 {% for log in logs %}
 
